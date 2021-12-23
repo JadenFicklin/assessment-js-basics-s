@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -31,8 +30,14 @@
 */
 
 //CODE HERE
-
-
+let pizza = {
+  name: "cheese pizza",
+  price: 5,
+  category: "entree",
+  popularity: 100,
+  rating: 9,
+  tags: ["trendy", "cheese", "yum", "gluten-free"],
+};
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +48,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +58,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza["tags"][1]);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +68,8 @@
 */
 
 //CODE HERE
-
+const { price } = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +79,8 @@
 */
 
 //CODE HERE
-
+const { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,8 +95,48 @@
 */
 
 //CODE HERE
-
-
+let foodArr = [
+  {
+    name: "Pepperoni",
+    price: 8,
+    category: "entree",
+    popularity: 86,
+    rating: 7,
+    tags: ["pepperoni-man", "best-sauce", "yum"],
+  },
+  {
+    name: "Mozzerella",
+    price: 3,
+    category: "entree",
+    popularity: 92,
+    rating: 8,
+    tags: ["itallian", "cheesy", "yum", "gluten-free"],
+  },
+  {
+    name: "Pineapple",
+    price: 8,
+    category: "entree",
+    popularity: 70,
+    rating: 7,
+    tags: ["fruit pizza", "islander", "yum"],
+  },
+  {
+    name: "Stuffed Crust",
+    price: 4,
+    category: "entree",
+    popularity: 80,
+    rating: 8,
+    tags: ["stuffed", "cheese", "yum"],
+  },
+  {
+    name: "Meat",
+    price: 9,
+    category: "entree",
+    popularity: 95,
+    rating: 10,
+    tags: ["meaty", "yum", "meatballs"],
+  },
+];
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,9 +152,7 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+// const filteredFood = foodArr.filter();
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,7 +194,6 @@
 */
 
 //CODE HERE
-
 
 /*
     Invoke the `filterByProperty` function passing
