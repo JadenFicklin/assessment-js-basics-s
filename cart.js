@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -19,24 +18,26 @@
 */
 
 const cart = [
-    {
-        name: 'pizza', 
-        price: 9.99
-    }, 
-    {
-        name: 'pasta', 
-        price: 8.99
-    }, 
-    {
-        name: 'salad', 
-        price: 7.99
-    }
-]
+  {
+    name: "pizza",
+    price: 9.99,
+  },
+  {
+    name: "pasta",
+    price: 8.99,
+  },
+  {
+    name: "salad",
+    price: 7.99,
+  },
+];
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce(function (accumulator, element) {
+  return accumulator + element.price;
+}, 0);
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +55,11 @@ const cart = [
 */
 
 //CODE HERE
-
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+  let taxTotal = cartTotal * tax;
+  return cartTotal - taxTotal - couponValue;
+}
+console.log(calcFinalPrice(20, 5, 0.1));
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,6 +83,12 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    
+I think it would be important to know the name of the customer, if they have food allergies and what, how many people they will be dining with, 
+
+name and the food allergy should be strings so that it can be customized to whatever it may be
+if they do or dont have a food allergy it should be a boolean so that if they dont have a food allergy you can toggle the food allergy string to not show.
+and party should be a number so that you can create an equation with it later if you want.
 
 */
 
@@ -88,3 +98,10 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+  name: "Sasha",
+  hasFoodAllergy: true,
+  foodAllergy: "Clams",
+  party: 4,
+};

@@ -110,15 +110,15 @@ let foodArr = [
     category: "entree",
     popularity: 92,
     rating: 8,
-    tags: ["itallian", "cheesy", "yum", "gluten-free"],
+    tags: ["itallian", "cheese", "gluten-free"],
   },
   {
     name: "Pineapple",
     price: 8,
     category: "entree",
     popularity: 70,
-    rating: 7,
-    tags: ["fruit pizza", "islander", "yum"],
+    rating: 4,
+    tags: ["fruit pizza", "islander", "gluten-free"],
   },
   {
     name: "Stuffed Crust",
@@ -126,7 +126,7 @@ let foodArr = [
     category: "entree",
     popularity: 80,
     rating: 8,
-    tags: ["stuffed", "cheese", "yum"],
+    tags: ["stuffed", "cheese"],
   },
   {
     name: "Meat",
@@ -134,7 +134,7 @@ let foodArr = [
     category: "entree",
     popularity: 95,
     rating: 10,
-    tags: ["meaty", "yum", "meatballs"],
+    tags: ["meaty", "yum", "meatballs", "itallian"],
   },
 ];
 
@@ -151,6 +151,10 @@ let foodArr = [
 */
 
 //CODE HERE
+
+const filterCallback = (element) => element.tags.includes("yum");
+const filteredFood = foodArr.filter(filterCallback);
+console.log(filteredFood);
 
 // const filteredFood = foodArr.filter();
 

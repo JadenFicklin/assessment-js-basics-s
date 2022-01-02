@@ -57,7 +57,7 @@ function canWeDeliver(zipCode) {
     console.log("Sorry, we can't deliver to that address");
   }
 }
-canWeDeliver(85213);
+canWeDeliver(85205);
 /* 
     Problem 2 Continued
 
@@ -77,17 +77,21 @@ canWeDeliver(85213);
 
 // CODE HERE
 
-function canWeDeliver(zipCode) {
-  for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-    if (deliveryAreaZipCodes[i] === zipCode) {
-      console.log(`${zipCode} is in our delivery zone`);
-    } else {
-      console.log(`${zipCode} doesnt match ${deliveryAreaZipCodes[i]}`);
-    }
+function canWeDeliverTwo(zipCode) {
+  let hasZipCode = false;
+
+  deliveryAreaZipCodes.forEach((element) => {
+    if (element === zipCode) hasZipCode = true;
+  });
+
+  if (hasZipCode) {
+    console.log("You're in our delivery zone!");
+  } else {
+    console.log("Sorry, we can't deliver to that address");
   }
 }
-canWeDeliver(85213);
-//i just figured a better way to do this problem actually but I'll do it over the break because im running out of time lol
+
+canWeDeliverTwo(85205);
 
 //////////////////PROBLEM 3////////////////////
 /* 
